@@ -1,0 +1,15 @@
+@function settings-toggle(
+  $value,
+  $trueValue: yes,
+  $trueStatement: block,
+  $falseValue: no,
+  $falseStatement: none
+) {
+  @if $value == $trueValue {
+    @return $trueStatement;
+  } @else if $value == $falseValue {
+    @return $falseStatement;
+  } @else {
+    @error 'Illegal Value for variable';
+  }
+}
