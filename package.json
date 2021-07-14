@@ -1,0 +1,48 @@
+{
+  "name": "customa-beta",
+  "version": "0.0.1",
+  "description": "The most customizable Discord theme out there.",
+  "main": "index.js",
+  "scripts": {
+    "theme:compile": "node ci/index.js",
+    "format:check": "stylelint '**/*.css'",
+    "format:fix": "stylelint '**/*.css' --fix",
+    "format:js": "prettier {**/*,*}.{js,md,json} --write",
+    "prepare": "husky install"
+  },
+  "repository": "git+https://github.com/ghostlydilemma/customa-beta.git",
+  "author": "Customa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghostlydilemma/customa-beta/issues"
+  },
+  "homepage": "https://github.com/ghostlydilemma/customa-beta#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.{js,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.6",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.1.7",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "postcss": "^8.3.5",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-reporter": "^7.0.2",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
+  }
+}

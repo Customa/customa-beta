@@ -1,0 +1,7 @@
+:root {
+  --test: 'this is a test';
+}
+
+.test {
+  content: 'test';
+}

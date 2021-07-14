@@ -1,0 +1,13 @@
+{
+  "name": "Customa Beta",
+  "description": "The most customizable Discord theme",
+  "version": "0.0.1",
+  "author": "The Customa Project",
+  "license": "MIT",
+  "theme": "loader.css",
+  "preview": [
+    "https://customa.gitlab.io/Customa-Misc/Discord/Dark%20Theme.png"
+  ],
+  "consent": ["ext_listing"],
+  "discord": "GsPuw88"
+}
