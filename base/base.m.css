@@ -1,3 +1,1 @@
-:root {
-  content: 'dummy text';
-}
+:root{--test:"this is a test"}.test{content:"test"}
