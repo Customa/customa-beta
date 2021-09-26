@@ -1,7 +1,177 @@
 :root {
-  --test: 'this is a test';
+  /* Colors */
+  --c-col-app-primary: #161616;
+  --c-col-app-secondary: #212121;
+
+  /* Background */
+  --c-col-app-bg: var(--c-col-app-primary);
+
+  /* Border */
+  --c-col-border-guild-wrapper: var(--c-col-app-primary);
+  --c-col-border-user-panel: var(--c-col-app-primary);
+  --c-col-border-search-button-dms: var(--c-col-app-primary);
+  --c-col-border-dm-title: var(--c-col-app-primary);
+  --c-col-border-chat-textarea: var(--c-col-app-primary);
+  --c-col-border-textarea-additions: var(--c-col-app-primary);
+
+  /* Border Radius */
+  --c-rad-textarea-additions: 10px;
+
+  /* Content */
+  --c-col-content-dm-channel-wrapper: var(--c-col-app-secondary);
+  --c-col-content-chat: var(--c-col-app-secondary);
+
+  /* Font */
+  --c-col-text-normal: #dcddde;
+  --c-col-text-muted: #72767d;
+  --c-col-interactive-normal: #b9bbbe;
+  --c-col-interactive-hover: #dcddde;
+  --c-col-interactive-active: #ffffff;
+  --c-col-interactive-muted: #4f545c;
 }
 
-.test {
-  content: 'test';
+/* Discord Variable Overrides */
+:root {
+  --text-normal: var(--c-col-text-normal);
+  --text-muted: var(--c-col-text-muted);
+  --interactive-normal: var(--c-col-interactive-normal);
+  --interactive-hover: var(--c-col-interactive-hover);
+  --interactive-active: var(--c-col-interactive-active);
+  --interactive-muted: var(--c-col-interactive-muted);
+}
+
+@font-face {
+  font-family: 'customa-misc';
+  src: url('https://ghostlydilemma.github.io/customa-misc-beta/assets/customa.woff2') format('woff2');
+}
+
+html {
+  background: var(--c-col-app-bg);
+}
+
+/* -- Background -- */
+
+/* TRANSPARENCY LAYER */
+.appMount-3lHmkl, body /* Discord Background */, .app-2rEoOp, .bg-h5JY_x /* App Layer Background */, .scroller-1Bvpku /* Guild Wrapper */, .sidebar-2K8pFh,
+.privateChannels-1nO12o /* Channel Wrapper */, .chat-3bRxxu, .threadSidebar-1o3BTy /* Chat Wrapper */, .channelTextArea-rNsIhG, .scrollableContainer-2NUZem
+/* Channel Textarea */ {
+  background-color: transparent;
+}
+
+/* BORDER */
+.wrapper-3NnKdC {
+  background-color: var(--c-col-border-guild-wrapper);
+}
+
+.panels-j1Uci_ {
+  background-color: var(--c-col-border-user-panel);
+}
+
+.searchBar-6Kv8R2 {
+  background-color: var(--c-col-border-search-button-dms);
+}
+
+.container-1r6BKw.themed-ANHk51 {
+  background-color: var(--c-col-border-dm-title);
+}
+
+.form-2fGMdU {
+  background-color: var(--c-col-border-chat-textarea);
+}
+
+.applicationCommandEducation-2jAJ0B {
+  background-color: var(--c-col-border-textarea-additions);
+}
+
+/* CONTENT */
+.scroller-1JbKMe {
+  background-color: var(--c-col-content-dm-channel-wrapper);
+}
+
+.content-yTz4x3 {
+  background-color: var(--c-col-content-chat);
+}
+
+/* -- Display -- */
+.form-2fGMdU::before /* Textarea Form Random Before Element */ {
+  display: none;
+}
+
+/* -- Margin -- */
+.container-3baos1 /* User profile container */ {
+  margin: 0;
+}
+
+/* -- Extras -- */
+
+/* TEXTAREA */
+.form-2fGMdU, .channelTextArea-rNsIhG /* Remove Margins */ {
+  margin: 0;
+  padding: 0;
+}
+
+.scrollableContainer-2NUZem .inner-MADQqc /* Text area inner container */ {
+  padding-left: 0;
+}
+
+.chat-3bRxxu .form-2fGMdU .placeholder-37qJjk, .chat-3bRxxu .form-2fGMdU .markup-2BOw-j {
+  padding: 15px 10px;
+  width: 100%;
+}
+
+.scrollableContainer-2NUZem .inner-MADQqc > div /* Set height of  */ {
+  min-height: 52px;
+}
+
+.channelTextArea-rNsIhG {
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.attachButton-2WznTc /* Adjust Upload Button Height */ {
+  padding: 0 0 0 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+  margin-left: 0;
+}
+
+.attachButton-2WznTc:hover::before {
+  color: var(--interactive-active);
+}
+
+.attachButton-2WznTc::before {
+  content: '\e801';
+  font-family: 'customa-misc', sans-serif;
+  font-size: 24px;
+  color: var(--interactive-normal);
+}
+
+.attachButtonInner-PQjIyk {
+  display: none;
+}
+
+.attachWrapper-2TRKBi /* Attach Wrapper no hover */ {
+  width: 0;
+  overflow: hidden;
+  transition: width 200ms 400ms;
+}
+
+.form-2fGMdU:hover .attachWrapper-2TRKBi /* Attach Wrapper when the textarea gets hovered */ {
+  width: 30px;
+  transition: width 200ms;
+}
+
+.applicationCommandEducation-2jAJ0B {
+  top: -34px;
+  left: 44px;
+  width: fit-content;
+  padding: 5px 14px;
+  border-radius: var(--c-rad-textarea-additions) var(--c-rad-textarea-additions) 0 0;
+}
+
+.applicationCommandEducation-2jAJ0B .applicationCommandEducationArrow-1DVDdr {
+  transform: rotate(180deg) scaleX(-1);
+  margin: 0 6px 0 0;
 }
