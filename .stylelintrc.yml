@@ -36,7 +36,7 @@ rules:
   at-rule-disallowed-list:
     - debug
   at-rule-empty-line-before: null
-  block-opening-brace-space-before: always
+  block-opening-brace-space-before: null
   block-closing-brace-newline-after:
     - always
     - ignoreAtRules:
@@ -44,3 +44,4 @@ rules:
         - else
   at-rule-name-space-after: always
   no-descending-specificity: null
+  selector-class-pattern: null
