@@ -43,3 +43,4 @@ rules:
         - if
         - else
   at-rule-name-space-after: always
+  no-descending-specificity: null

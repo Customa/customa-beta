@@ -17,32 +17,17 @@
     "url": "https://github.com/ghostlydilemma/customa-beta/issues"
   },
   "homepage": "https://github.com/ghostlydilemma/customa-beta#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.css": [
-      "stylelint --fix",
-      "git add"
-    ],
-    "*.{js,md,json}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "devDependencies": {
-    "cssnano": "^5.0.6",
+    "cssnano": "^5.0.12",
     "fs-extra": "^10.0.0",
-    "glob": "^7.1.7",
-    "husky": ">=6",
-    "lint-staged": ">=10",
-    "postcss": "^8.3.5",
-    "postcss-custom-properties": "^11.0.0",
-    "postcss-reporter": "^7.0.2",
-    "prettier": "^2.3.2",
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^22.0.0"
+    "glob": "^7.2.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "postcss": "^8.4.4",
+    "postcss-custom-properties": "^12.0.0",
+    "postcss-reporter": "^7.0.4",
+    "prettier": "^2.5.0",
+    "stylelint": "^14.1.0",
+    "stylelint-config-standard": "^24.0.0"
   }
 }
